@@ -31,6 +31,20 @@ class RecentPhotosPresenter: RecentPhotosPresenterProtocol {
     func selectPhoto(at index: Int) {
         interactor.selectPhoto(at: index)
     }
+    
+    private func makeProfilePictureUrl() {
+        var photoList: [Photo] = []
+        for i in 0..<photos.count {
+            var photo = photos[i]
+            var url: String = AppConstants.Endpoint.Base.ppUrl
+            url = url.replacingOccurrences(of: "{icon-farm}", with: "\(photo.iconfarm)")
+            url = url.replacingOccurrences(of: "{icon-server}", with: photo.iconserver)
+            url = url.replacingOccurrences(of: "{nsid}", with: photo.owner)
+            photo.profilePictureUrl = url
+            photoList.append(photo)
+        }
+        self.photos = photoList
+    }
 }
 
 extension RecentPhotosPresenter: RecentPhotosInteractorDelegate {
@@ -40,6 +54,7 @@ extension RecentPhotosPresenter: RecentPhotosInteractorDelegate {
             view.handleOutput(.setLoading(isLoading))
         case .showPhotosList(let photos):
             self.photos = photos
+            makeProfilePictureUrl()
             view.handleOutput(.showPhotos())
         case .showPhotoDetail(let photo):
             router.navigate(to: .detail(photo))

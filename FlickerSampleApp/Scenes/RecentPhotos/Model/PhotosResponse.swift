@@ -29,6 +29,7 @@ struct Photo: Decodable {
         case iconfarm
         case photoUrl = "url_l"
         case date = "datetaken"
+        case profilePictureUrl
     }
     
     let title: String
@@ -39,6 +40,7 @@ struct Photo: Decodable {
     let iconfarm: Int
     let photoUrl: String?
     let date: String
+    var profilePictureUrl: String?
 }
 
 
