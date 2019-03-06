@@ -23,18 +23,22 @@ struct Photo: Decodable {
     enum CodingKeys: String, CodingKey {
         case title
         case owner
+        case ownerName = "ownername"
         case secret
         case iconserver
         case iconfarm
         case photoUrl = "url_l"
+        case date = "datetaken"
     }
     
     let title: String
     let owner: String
+    let ownerName: String
     let secret: String
     let iconserver: String
     let iconfarm: Int
     let photoUrl: String?
+    let date: String
 }
 
 

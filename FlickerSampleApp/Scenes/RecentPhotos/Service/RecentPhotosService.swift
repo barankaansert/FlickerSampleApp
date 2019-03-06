@@ -18,7 +18,13 @@ class RecentPhotosService: BaseService<PhotosResponse>, RecentPhotosServiceProto
     override init() {
         super.init()
         path = AppConstants.Endpoint.Method.recentPhotos
-        queryParameters = [AppConstants.Endpoint.Query.extras: AppConstants.Endpoint.Query.url_l + "," + AppConstants.Endpoint.Query.iconServer]
+        queryParameters = [AppConstants.Endpoint.Query.extras: AppConstants.Endpoint.Query.url_l +
+            "," +
+            AppConstants.Endpoint.Query.iconServer +
+            "," +
+            AppConstants.Endpoint.Query.ownerName +
+            "," +
+            AppConstants.Endpoint.Query.date]
     }
     
     func fetchRecentPhotos(succeed: @escaping (PhotosResponse) -> Void,

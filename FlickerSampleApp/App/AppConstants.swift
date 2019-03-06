@@ -23,6 +23,8 @@ struct AppConstants {
             static let extras = "extras"
             static let url_l = "url_l"
             static let iconServer = "icon_server"
+            static let ownerName = "owner_name"
+            static let date = "date_taken"
         }
         struct Method {
             static let recentPhotos = "flickr.photos.getRecent"

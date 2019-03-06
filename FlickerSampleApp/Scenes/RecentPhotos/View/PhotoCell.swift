@@ -16,6 +16,9 @@ class PhotoCell: UITableViewCell {
 
     @IBOutlet private var imageViewPhoto: UIImageView!
     @IBOutlet private var imageViewProfilePicture: UIImageView!
+    
+    @IBOutlet private var labelOwner: UILabel!
+    @IBOutlet private var labelDescription: UILabel!
     @IBOutlet private var labelTitle: UILabel!
     
     override func awakeFromNib() {
@@ -23,7 +26,7 @@ class PhotoCell: UITableViewCell {
         selectionStyle = .none
         imageViewProfilePicture.layer.cornerRadius = imageViewProfilePicture.bounds.width / 2
         imageViewProfilePicture.layer.borderWidth = 1
-        imageViewProfilePicture.layer.borderColor = UIColor.lightGray.cgColor
+        imageViewProfilePicture.layer.borderColor = UIColor.orange.cgColor
         imageViewProfilePicture.clipsToBounds = true
     }
     
@@ -36,6 +39,8 @@ class PhotoCell: UITableViewCell {
     func configure(photo: Photo) {
         setProfilePicture(photo: photo)
         labelTitle.text = photo.title
+        labelOwner.text = photo.ownerName
+        labelDescription.text = photo.date
         if let url = photo.photoUrl {
             setImage(url)
         }
