@@ -7,12 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2884128E6D14CAC969BEFBE1 /* Pods_FlickerSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98959C8263C45BF7D44094ED /* Pods_FlickerSampleApp.framework */; };
 		672D79A4222FD9D500906BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D79A3222FD9D500906BD2 /* AppDelegate.swift */; };
-		672D79A6222FD9D500906BD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D79A5222FD9D500906BD2 /* ViewController.swift */; };
-		672D79A9222FD9D500906BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D79A7222FD9D500906BD2 /* Main.storyboard */; };
 		672D79AB222FD9D700906BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672D79AA222FD9D700906BD2 /* Assets.xcassets */; };
 		672D79AE222FD9D700906BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672D79AC222FD9D700906BD2 /* LaunchScreen.storyboard */; };
 		672D79B9222FD9D700906BD2 /* FlickerSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D79B8222FD9D700906BD2 /* FlickerSampleAppTests.swift */; };
+		672D79C9222FDB6700906BD2 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D79C8222FDB6700906BD2 /* AppContainer.swift */; };
+		672D79CB222FDC3300906BD2 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D79CA222FDC3300906BD2 /* AppRouter.swift */; };
+		679CADC1222FE01A000E9B43 /* RecentPhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADBB222FE01A000E9B43 /* RecentPhotosPresenter.swift */; };
+		679CADC2222FE01A000E9B43 /* RecentPhotosRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADBC222FE01A000E9B43 /* RecentPhotosRouter.swift */; };
+		679CADC3222FE01A000E9B43 /* RecentPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADBD222FE01A000E9B43 /* RecentPhotosViewController.swift */; };
+		679CADC4222FE01A000E9B43 /* RecentPhotosProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADBE222FE01A000E9B43 /* RecentPhotosProtocols.swift */; };
+		679CADC5222FE01A000E9B43 /* RecentPhotosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADBF222FE01A000E9B43 /* RecentPhotosInteractor.swift */; };
+		679CADC6222FE01A000E9B43 /* RecentPhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 679CADC0222FE01A000E9B43 /* RecentPhotosViewController.xib */; };
+		679CADD1222FE3F2000E9B43 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD0222FE3F2000E9B43 /* NetworkManager.swift */; };
+		679CADD3222FE517000E9B43 /* NetworkingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD2222FE517000E9B43 /* NetworkingContract.swift */; };
+		679CADD5222FE6E4000E9B43 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD4222FE6E4000E9B43 /* AppConstants.swift */; };
+		679CADD7222FE922000E9B43 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD6222FE922000E9B43 /* BaseRequest.swift */; };
+		679CADD9222FEC8B000E9B43 /* RecentPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD8222FEC8B000E9B43 /* RecentPhotosService.swift */; };
+		67E20B5C223035B900983669 /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B5B223035B900983669 /* PhotosResponse.swift */; };
+		67E20B5F2230367F00983669 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B5D2230367F00983669 /* PhotoCell.swift */; };
+		67E20B602230367F00983669 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E20B5E2230367F00983669 /* PhotoCell.xib */; };
+		67E20B632230430000983669 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B622230430000983669 /* UIImageViewExtension.swift */; };
+		67E20B652230436E00983669 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B642230436E00983669 /* URLComponentsExtension.swift */; };
+		8930B1EB2CC368C25BB590DE /* Pods_FlickerSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF5A90C935F39DF5835E7D7 /* Pods_FlickerSampleAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +44,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02ADDF0873421C875A2EF6D0 /* Pods-FlickerSampleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerSampleAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerSampleAppTests/Pods-FlickerSampleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		357375D61D950D2179D51E2B /* Pods-FlickerSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerSampleApp/Pods-FlickerSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		672D79A0222FD9D500906BD2 /* FlickerSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickerSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672D79A3222FD9D500906BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		672D79A5222FD9D500906BD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		672D79A8222FD9D500906BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		672D79AA222FD9D700906BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672D79AD222FD9D700906BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672D79AF222FD9D700906BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		672D79B4222FD9D700906BD2 /* FlickerSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		672D79B8222FD9D700906BD2 /* FlickerSampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerSampleAppTests.swift; sourceTree = "<group>"; };
 		672D79BA222FD9D700906BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672D79C8222FDB6700906BD2 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		672D79CA222FDC3300906BD2 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		679CADBB222FE01A000E9B43 /* RecentPhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosPresenter.swift; sourceTree = "<group>"; };
+		679CADBC222FE01A000E9B43 /* RecentPhotosRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosRouter.swift; sourceTree = "<group>"; };
+		679CADBD222FE01A000E9B43 /* RecentPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosViewController.swift; sourceTree = "<group>"; };
+		679CADBE222FE01A000E9B43 /* RecentPhotosProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosProtocols.swift; sourceTree = "<group>"; };
+		679CADBF222FE01A000E9B43 /* RecentPhotosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosInteractor.swift; sourceTree = "<group>"; };
+		679CADC0222FE01A000E9B43 /* RecentPhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentPhotosViewController.xib; sourceTree = "<group>"; };
+		679CADD0222FE3F2000E9B43 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		679CADD2222FE517000E9B43 /* NetworkingContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingContract.swift; sourceTree = "<group>"; };
+		679CADD4222FE6E4000E9B43 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		679CADD6222FE922000E9B43 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		679CADD8222FEC8B000E9B43 /* RecentPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosService.swift; sourceTree = "<group>"; };
+		67E20B5B223035B900983669 /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
+		67E20B5D2230367F00983669 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		67E20B5E2230367F00983669 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		67E20B622230430000983669 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		67E20B642230436E00983669 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
+		98959C8263C45BF7D44094ED /* Pods_FlickerSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1A4A2D1AF5BF12818F7125F /* Pods-FlickerSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerSampleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerSampleAppTests/Pods-FlickerSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		CAF5A90C935F39DF5835E7D7 /* Pods_FlickerSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91742DF8740DA4F8358EE25 /* Pods-FlickerSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerSampleApp/Pods-FlickerSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2884128E6D14CAC969BEFBE1 /* Pods_FlickerSampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8930B1EB2CC368C25BB590DE /* Pods_FlickerSampleAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +104,8 @@
 				672D79A2222FD9D500906BD2 /* FlickerSampleApp */,
 				672D79B7222FD9D700906BD2 /* FlickerSampleAppTests */,
 				672D79A1222FD9D500906BD2 /* Products */,
+				EC2FB684F034F62875F42F0E /* Pods */,
+				ACC80821ED4895E1320B247F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +121,12 @@
 		672D79A2222FD9D500906BD2 /* FlickerSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				672D79A3222FD9D500906BD2 /* AppDelegate.swift */,
-				672D79A5222FD9D500906BD2 /* ViewController.swift */,
-				672D79A7222FD9D500906BD2 /* Main.storyboard */,
-				672D79AA222FD9D700906BD2 /* Assets.xcassets */,
-				672D79AC222FD9D700906BD2 /* LaunchScreen.storyboard */,
-				672D79AF222FD9D700906BD2 /* Info.plist */,
+				672D79C5222FDAA900906BD2 /* App */,
+				672D79CC222FDCC000906BD2 /* Scenes */,
+				67E20B61223042DD00983669 /* Extensions */,
+				679CADCF222FE30A000E9B43 /* Networking */,
+				672D79C6222FDADD00906BD2 /* Resources */,
+				672D79C7222FDAFD00906BD2 /* Supporting Files */,
 			);
 			path = FlickerSampleApp;
 			sourceTree = "<group>";
@@ -96,6 +140,154 @@
 			path = FlickerSampleAppTests;
 			sourceTree = "<group>";
 		};
+		672D79C5222FDAA900906BD2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				672D79A3222FD9D500906BD2 /* AppDelegate.swift */,
+				672D79C8222FDB6700906BD2 /* AppContainer.swift */,
+				672D79CA222FDC3300906BD2 /* AppRouter.swift */,
+				679CADD4222FE6E4000E9B43 /* AppConstants.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		672D79C6222FDADD00906BD2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				672D79AA222FD9D700906BD2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		672D79C7222FDAFD00906BD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				672D79AC222FD9D700906BD2 /* LaunchScreen.storyboard */,
+				672D79AF222FD9D700906BD2 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		672D79CC222FDCC000906BD2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				679CADCE222FE1B5000E9B43 /* RecentPhotos */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		679CADC7222FE161000E9B43 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				679CADBE222FE01A000E9B43 /* RecentPhotosProtocols.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		679CADC8222FE161000E9B43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67E20B5B223035B900983669 /* PhotosResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		679CADC9222FE162000E9B43 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				679CADBB222FE01A000E9B43 /* RecentPhotosPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		679CADCA222FE162000E9B43 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				679CADBF222FE01A000E9B43 /* RecentPhotosInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		679CADCB222FE162000E9B43 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				679CADD8222FEC8B000E9B43 /* RecentPhotosService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		679CADCC222FE162000E9B43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				679CADBD222FE01A000E9B43 /* RecentPhotosViewController.swift */,
+				679CADC0222FE01A000E9B43 /* RecentPhotosViewController.xib */,
+				67E20B5D2230367F00983669 /* PhotoCell.swift */,
+				67E20B5E2230367F00983669 /* PhotoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		679CADCD222FE178000E9B43 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				679CADBC222FE01A000E9B43 /* RecentPhotosRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		679CADCE222FE1B5000E9B43 /* RecentPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				679CADC7222FE161000E9B43 /* Contract */,
+				679CADCA222FE162000E9B43 /* Interactor */,
+				679CADC8222FE161000E9B43 /* Model */,
+				679CADC9222FE162000E9B43 /* Presenter */,
+				679CADCD222FE178000E9B43 /* Router */,
+				679CADCB222FE162000E9B43 /* Service */,
+				679CADCC222FE162000E9B43 /* View */,
+			);
+			path = RecentPhotos;
+			sourceTree = "<group>";
+		};
+		679CADCF222FE30A000E9B43 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				679CADD0222FE3F2000E9B43 /* NetworkManager.swift */,
+				679CADD2222FE517000E9B43 /* NetworkingContract.swift */,
+				679CADD6222FE922000E9B43 /* BaseRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		67E20B61223042DD00983669 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67E20B622230430000983669 /* UIImageViewExtension.swift */,
+				67E20B642230436E00983669 /* URLComponentsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ACC80821ED4895E1320B247F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98959C8263C45BF7D44094ED /* Pods_FlickerSampleApp.framework */,
+				CAF5A90C935F39DF5835E7D7 /* Pods_FlickerSampleAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC2FB684F034F62875F42F0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				357375D61D950D2179D51E2B /* Pods-FlickerSampleApp.debug.xcconfig */,
+				E91742DF8740DA4F8358EE25 /* Pods-FlickerSampleApp.release.xcconfig */,
+				02ADDF0873421C875A2EF6D0 /* Pods-FlickerSampleAppTests.debug.xcconfig */,
+				B1A4A2D1AF5BF12818F7125F /* Pods-FlickerSampleAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672D79BD222FD9D700906BD2 /* Build configuration list for PBXNativeTarget "FlickerSampleApp" */;
 			buildPhases = (
+				EA90A3CE4E1FE574CEAD1369 /* [CP] Check Pods Manifest.lock */,
 				672D799C222FD9D500906BD2 /* Sources */,
 				672D799D222FD9D500906BD2 /* Frameworks */,
 				672D799E222FD9D500906BD2 /* Resources */,
+				9C45823770E8937E1FCFD87B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +314,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672D79C0222FD9D700906BD2 /* Build configuration list for PBXNativeTarget "FlickerSampleAppTests" */;
 			buildPhases = (
+				CBA93326BDFC17B5023B9421 /* [CP] Check Pods Manifest.lock */,
 				672D79B0222FD9D700906BD2 /* Sources */,
 				672D79B1222FD9D700906BD2 /* Frameworks */,
 				672D79B2222FD9D700906BD2 /* Resources */,
@@ -177,9 +372,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E20B602230367F00983669 /* PhotoCell.xib in Resources */,
 				672D79AE222FD9D700906BD2 /* LaunchScreen.storyboard in Resources */,
 				672D79AB222FD9D700906BD2 /* Assets.xcassets in Resources */,
-				672D79A9222FD9D500906BD2 /* Main.storyboard in Resources */,
+				679CADC6222FE01A000E9B43 /* RecentPhotosViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,13 +388,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C45823770E8937E1FCFD87B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlickerSampleApp/Pods-FlickerSampleApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlickerSampleApp/Pods-FlickerSampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBA93326BDFC17B5023B9421 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickerSampleAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA90A3CE4E1FE574CEAD1369 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlickerSampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		672D799C222FD9D500906BD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				672D79A6222FD9D500906BD2 /* ViewController.swift in Sources */,
+				679CADD1222FE3F2000E9B43 /* NetworkManager.swift in Sources */,
+				67E20B5F2230367F00983669 /* PhotoCell.swift in Sources */,
+				679CADC5222FE01A000E9B43 /* RecentPhotosInteractor.swift in Sources */,
+				679CADC3222FE01A000E9B43 /* RecentPhotosViewController.swift in Sources */,
+				679CADD9222FEC8B000E9B43 /* RecentPhotosService.swift in Sources */,
+				679CADD5222FE6E4000E9B43 /* AppConstants.swift in Sources */,
+				67E20B5C223035B900983669 /* PhotosResponse.swift in Sources */,
+				679CADC1222FE01A000E9B43 /* RecentPhotosPresenter.swift in Sources */,
+				679CADC4222FE01A000E9B43 /* RecentPhotosProtocols.swift in Sources */,
+				679CADD3222FE517000E9B43 /* NetworkingContract.swift in Sources */,
+				679CADC2222FE01A000E9B43 /* RecentPhotosRouter.swift in Sources */,
+				679CADD7222FE922000E9B43 /* BaseRequest.swift in Sources */,
+				672D79CB222FDC3300906BD2 /* AppRouter.swift in Sources */,
 				672D79A4222FD9D500906BD2 /* AppDelegate.swift in Sources */,
+				67E20B652230436E00983669 /* URLComponentsExtension.swift in Sources */,
+				67E20B632230430000983669 /* UIImageViewExtension.swift in Sources */,
+				672D79C9222FDB6700906BD2 /* AppContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +489,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		672D79A7222FD9D500906BD2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				672D79A8222FD9D500906BD2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		672D79AC222FD9D700906BD2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,11 +618,12 @@
 		};
 		672D79BE222FD9D700906BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357375D61D950D2179D51E2B /* Pods-FlickerSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z79FV5KFE;
-				INFOPLIST_FILE = FlickerSampleApp/Info.plist;
+				INFOPLIST_FILE = "FlickerSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,11 +637,12 @@
 		};
 		672D79BF222FD9D700906BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91742DF8740DA4F8358EE25 /* Pods-FlickerSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Z79FV5KFE;
-				INFOPLIST_FILE = FlickerSampleApp/Info.plist;
+				INFOPLIST_FILE = "FlickerSampleApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +656,7 @@
 		};
 		672D79C1222FD9D700906BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02ADDF0873421C875A2EF6D0 /* Pods-FlickerSampleAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +678,7 @@
 		};
 		672D79C2222FD9D700906BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1A4A2D1AF5BF12818F7125F /* Pods-FlickerSampleAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
