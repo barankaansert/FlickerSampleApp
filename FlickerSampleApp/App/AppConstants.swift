@@ -14,6 +14,7 @@ struct AppConstants {
             static let scheme = "https"
             static let host = "api.flickr.com"
             static let path = "/services/rest/"
+            static let ppUrl = "http://farm{icon-farm}.staticflickr.com/{icon-server}/buddyicons/{nsid}.jpg"
         }
         struct Query {
             static let apiKey = "c01e839182d04c639b3b8e4660d929e4"
@@ -21,10 +22,13 @@ struct AppConstants {
             static let noJsonCallback = "1"
             static let extras = "extras"
             static let url_l = "url_l"
+            static let iconServer = "icon_server"
         }
         struct Method {
             static let recentPhotos = "flickr.photos.getRecent"
         }
+        
+        
         
     }
 }

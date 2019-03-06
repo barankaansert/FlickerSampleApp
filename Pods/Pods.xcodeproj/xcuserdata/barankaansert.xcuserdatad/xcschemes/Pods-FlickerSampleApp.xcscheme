@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8CCB9051A83917A6EB05444AEC130538"
+               BlueprintIdentifier = "685A53F4728C5C4206C3B527718AF4E7"
                BuildableName = "Pods_FlickerSampleApp.framework"
                BlueprintName = "Pods-FlickerSampleApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8CCB9051A83917A6EB05444AEC130538"
+            BlueprintIdentifier = "685A53F4728C5C4206C3B527718AF4E7"
             BuildableName = "Pods_FlickerSampleApp.framework"
             BlueprintName = "Pods-FlickerSampleApp"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentPhotosViewController" customModule="FlickerSampleApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="lMy-ul-H5D" id="MRz-rM-9Pu"/>
                 <outlet property="tableView" destination="VmF-Ng-y3m" id="fl5-tf-5Ea"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,17 +21,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmF-Ng-y3m">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmF-Ng-y3m">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" red="0.98431372549999996" green="0.66274509800000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="lMy-ul-H5D">
+                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
-            <color key="backgroundColor" red="0.1978142547" green="0.386777553" blue="0.55363657990000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="VmF-Ng-y3m" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HeJ-v4-5Iz"/>
                 <constraint firstAttribute="trailing" secondItem="VmF-Ng-y3m" secondAttribute="trailing" id="KB1-Me-E6W"/>
+                <constraint firstItem="lMy-ul-H5D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="W2N-3U-88e"/>
                 <constraint firstAttribute="bottom" secondItem="VmF-Ng-y3m" secondAttribute="bottom" id="gNL-AE-yms"/>
                 <constraint firstItem="VmF-Ng-y3m" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mFN-J5-APE"/>
+                <constraint firstItem="lMy-ul-H5D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="yvb-MD-Y1E"/>
             </constraints>
         </view>
     </objects>

@@ -15,6 +15,8 @@ class RecentPhotosViewController: UIViewController {
 
     @IBOutlet private var tableView: UITableView!
     
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -32,7 +34,11 @@ extension RecentPhotosViewController: RecentPhotosViewProtocol {
     func handleOutput(_ output: RecentPhotosPresenterOutput) {
         switch output {
         case .setLoading(let isLoading):
-            UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
+            if isLoading {
+                activityIndicator.startAnimating()
+            } else {
+                activityIndicator.stopAnimating()
+            }
         case .updateTitle(let title):
             self.title = title
         case .showPhotos:

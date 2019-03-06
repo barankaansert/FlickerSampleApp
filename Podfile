@@ -3,12 +3,17 @@
 use_frameworks!
 
 def network_pod
-pod 'Alamofire'
+    pod 'Alamofire'
+end
+
+def image_pod
+    pod 'Kingfisher'
 end
 
 
 target 'FlickerSampleApp' do
     network_pod
+    image_pod
 end
 
 

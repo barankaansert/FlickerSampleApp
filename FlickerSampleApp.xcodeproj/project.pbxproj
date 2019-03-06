@@ -28,7 +28,6 @@
 		67E20B5C223035B900983669 /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B5B223035B900983669 /* PhotosResponse.swift */; };
 		67E20B5F2230367F00983669 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B5D2230367F00983669 /* PhotoCell.swift */; };
 		67E20B602230367F00983669 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E20B5E2230367F00983669 /* PhotoCell.xib */; };
-		67E20B632230430000983669 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B622230430000983669 /* UIImageViewExtension.swift */; };
 		67E20B652230436E00983669 /* URLComponentsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B642230436E00983669 /* URLComponentsExtension.swift */; };
 		8930B1EB2CC368C25BB590DE /* Pods_FlickerSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF5A90C935F39DF5835E7D7 /* Pods_FlickerSampleAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,7 +69,6 @@
 		67E20B5B223035B900983669 /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 		67E20B5D2230367F00983669 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		67E20B5E2230367F00983669 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
-		67E20B622230430000983669 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		67E20B642230436E00983669 /* URLComponentsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtension.swift; sourceTree = "<group>"; };
 		98959C8263C45BF7D44094ED /* Pods_FlickerSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickerSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1A4A2D1AF5BF12818F7125F /* Pods-FlickerSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickerSampleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickerSampleAppTests/Pods-FlickerSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 		67E20B61223042DD00983669 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				67E20B622230430000983669 /* UIImageViewExtension.swift */,
 				67E20B642230436E00983669 /* URLComponentsExtension.swift */,
 			);
 			path = Extensions;
@@ -397,10 +394,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlickerSampleApp/Pods-FlickerSampleApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,7 +464,6 @@
 				672D79CB222FDC3300906BD2 /* AppRouter.swift in Sources */,
 				672D79A4222FD9D500906BD2 /* AppDelegate.swift in Sources */,
 				67E20B652230436E00983669 /* URLComponentsExtension.swift in Sources */,
-				67E20B632230430000983669 /* UIImageViewExtension.swift in Sources */,
 				672D79C9222FDB6700906BD2 /* AppContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
