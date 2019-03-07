@@ -12,8 +12,6 @@ class BaseService<ItemType: Decodable>: HTTPRequest {
     
     typealias SuccessType = ((ItemType) -> Void)
     typealias FailureType = ((Error) -> Void)
-    var successBlock: SuccessType!
-    var failureBlock: FailureType!
     
     var requestType: HTTPMethod = .get
     var path: String = ""
@@ -21,13 +19,7 @@ class BaseService<ItemType: Decodable>: HTTPRequest {
     
     // MARK: Get Response
     func response(succeed: @escaping SuccessType, failed: @escaping FailureType) {
-        self.successBlock = succeed
-        self.failureBlock = failed
-        sendRequest()
+        Networker.call(requestObject: self, succeed: succeed, failed: failed)
     }
     
-    private func sendRequest() {
-        Networker.call(requestObject: self, succeed: successBlock, failed: failureBlock)
-    }
-
 }
