@@ -9,16 +9,21 @@
 import UIKit
 import Kingfisher
 
+protocol PhotoCellDelegate: class {
+    func cellDidTapped(cell: PhotoCell)
+}
+
 class PhotoCell: UITableViewCell {
     
     static let identifier = "PhotoCell"
     static let height: CGFloat = 400
 
-    @IBOutlet private var imageViewPhoto: UIImageView!
+    @IBOutlet var imageViewPhoto: UIImageView!
     @IBOutlet private var imageViewProfilePicture: UIImageView!
     @IBOutlet private var labelOwner: UILabel!
     @IBOutlet private var labelDescription: UILabel!
     @IBOutlet private var labelTitle: UILabel!
+    weak var delegate: PhotoCellDelegate?
     private let ppTag = 7238
     
     override func awakeFromNib() {
@@ -29,6 +34,8 @@ class PhotoCell: UITableViewCell {
         imageViewProfilePicture.layer.borderColor = UIColor.orange.cgColor
         imageViewProfilePicture.clipsToBounds = true
         imageViewProfilePicture.tag = ppTag
+        imageViewPhoto.isUserInteractionEnabled = true
+        imageViewPhoto.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(photoDidTapped)))
     }
     
     override func prepareForReuse() {
@@ -58,6 +65,10 @@ class PhotoCell: UITableViewCell {
                 .transition(.fade(1)),
                 .cacheOriginalImage
             ])
+    }
+    
+    @objc private func photoDidTapped() {
+        delegate?.cellDidTapped(cell: self)
     }
         
 }

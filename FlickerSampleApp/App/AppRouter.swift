@@ -10,17 +10,15 @@ import UIKit
 
 final class AppRouter {
     
-    let window: UIWindow
-    
-    init() {
+    /**
+     Starting application with UIApplications window.
+     */
+    func start(window: inout UIWindow?) {
         window = UIWindow(frame: UIScreen.main.bounds)
-    }
-    
-    func start() {
         let viewController = RecentPhotosRouter.createModule()
         let navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+        window!.rootViewController = navigationController
+        window!.makeKeyAndVisible()
     }
 }
 

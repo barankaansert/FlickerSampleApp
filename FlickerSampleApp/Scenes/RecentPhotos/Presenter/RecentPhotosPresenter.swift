@@ -10,28 +10,54 @@
 import UIKit
 
 class RecentPhotosPresenter: RecentPhotosPresenterProtocol {
-    private unowned var view: RecentPhotosViewProtocol
+    
+    private weak var view: RecentPhotosViewProtocol?
     private let interactor: RecentPhotosInteractorProtocol
     private let router: RecentPhotosWireframeProtocol
-    private(set) var photos: [Photo] = []
-
+    
     init(interface: RecentPhotosViewProtocol, interactor: RecentPhotosInteractorProtocol, router: RecentPhotosWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
         self.interactor.delegate = self
     }
-
     
+    /**
+     Received photos from web service
+     */
+    private(set) var photos: [Photo] = []
+    
+    
+    /**
+     Page count of loaded images
+     */
+    var page: Int = 0
+    
+    /**
+     Sending message to interactor for loading photos
+     Incrementing page count
+     Setting page title
+     */
     func load() {
-        view.handleOutput(.updateTitle("Recent Photos"))
-        interactor.load()
+        page += 1
+        view?.handleOutput(.updateTitle("Recent Photos"))
+        interactor.load(at: page)
     }
     
-    func selectPhoto(at index: Int) {
-        interactor.selectPhoto(at: index)
+    
+    /**
+     Sending message to router to navigate new page
+     */
+    func selectPhoto() {
+        router.navigate(to: .detail)
     }
     
+    
+    /*
+     *
+     Profile picture url is dynamically provided, so this method collecting relevant photo information and
+     preparing profile picture url and putting to unused attribute of photos struct
+     */
     private func makeProfilePictureUrl() {
         var photoList: [Photo] = []
         for i in 0..<photos.count {
@@ -47,17 +73,21 @@ class RecentPhotosPresenter: RecentPhotosPresenterProtocol {
     }
 }
 
+
 extension RecentPhotosPresenter: RecentPhotosInteractorDelegate {
+    
+    /**
+     Handling interactor's outputs
+     - parameter output: interactor output options handle with
+     */
     func handleOutput(_ output: RecentPhotosInteractorOutput) {
         switch output {
         case .setLoading(let isLoading):
-            view.handleOutput(.setLoading(isLoading))
+            view?.handleOutput(.setLoading(isLoading))
         case .showPhotosList(let photos):
             self.photos = photos
             makeProfilePictureUrl()
-            view.handleOutput(.showPhotos())
-        case .showPhotoDetail(let photo):
-            router.navigate(to: .detail(photo))
+            view?.handleOutput(.showPhotos)
         }
     }
 }

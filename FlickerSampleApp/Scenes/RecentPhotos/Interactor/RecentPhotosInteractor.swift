@@ -20,20 +20,19 @@ class RecentPhotosInteractor: RecentPhotosInteractorProtocol {
     
     var delegate: RecentPhotosInteractorDelegate?
     
-    func load() {
+    /**
+     Getting images from web services.
+     - parameter page: page count of recent photos.
+     */
+    func load(at page: Int) {
         delegate?.handleOutput(.setLoading(true))
-        service.fetchRecentPhotos(succeed: { [weak self] (response) in
+        service.fetchRecentPhotos(page: page, succeed: { [weak self] (response) in
             guard let self = self else { return }
             self.delegate?.handleOutput(.setLoading(false))
-            self.photos = response.photos.photo
+            self.photos.append(contentsOf: response.photos.photo)
             self.delegate?.handleOutput(.showPhotosList(self.photos))
         }) { (error) in
             self.delegate?.handleOutput(.setLoading(false))
-            print(error)
         }
-    }
-    
-    func selectPhoto(at index: Int) {
-        delegate?.handleOutput(.showPhotoDetail(self.photos[index]))
     }
 }

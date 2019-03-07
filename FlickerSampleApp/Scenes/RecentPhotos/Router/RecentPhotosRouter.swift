@@ -26,8 +26,15 @@ class RecentPhotosRouter: RecentPhotosWireframeProtocol {
         return view
     }
     
+    /**
+     Handling Route in RecentPhotosRouter
+     - parameter output: navigation option of router
+     */
     func navigate(to route: RecentPhotosRoute) {
-        
+        switch route {
+        case .detail:
+            (viewController as! RecentPhotosViewController).presentPhoto()
+        }
     }
     
     

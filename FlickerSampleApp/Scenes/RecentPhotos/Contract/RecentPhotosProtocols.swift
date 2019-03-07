@@ -9,44 +9,42 @@
 
 import Foundation
 
-//MARK: Wireframe -
+//MARK: Wireframe
 enum RecentPhotosRoute {
-    case detail(Photo)
+    case detail
 }
 
 protocol RecentPhotosWireframeProtocol: class {
     func navigate(to route: RecentPhotosRoute)
 }
-//MARK: Presenter -
+
+//MARK: Presenter
 protocol RecentPhotosPresenterProtocol: class {
     var photos: [Photo] { get }
     func load()
-    func selectPhoto(at index: Int)
+    func selectPhoto()
 }
 
-//MARK: Interactor -
+//MARK: Interactor
 protocol RecentPhotosInteractorProtocol: class {
     var delegate: RecentPhotosInteractorDelegate? { get set }
-    func load()
-    func selectPhoto(at index: Int)
+    func load(at page: Int)
 }
 
 enum RecentPhotosInteractorOutput {
     case setLoading(Bool)
     case showPhotosList([Photo])
-    case showPhotoDetail(Photo)
 }
 
 protocol RecentPhotosInteractorDelegate {
     func handleOutput(_ output: RecentPhotosInteractorOutput)
 }
 
-//MARK: View -
-
-enum RecentPhotosPresenterOutput {
+//MARK: View
+enum RecentPhotosPresenterOutput: Equatable {
     case updateTitle(String)
     case setLoading(Bool)
-    case showPhotos()
+    case showPhotos
 }
 
 protocol RecentPhotosViewProtocol: class {

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ Photos response model detailed.
+ */
+
 struct PhotosResponse: Decodable {
     let photos: Photos
 }
@@ -20,6 +24,10 @@ struct Photos: Decodable {
 }
 
 struct Photo: Decodable {
+    
+    /**
+     Coding Keys for usage of different name of attribute.
+     */
     enum CodingKeys: String, CodingKey {
         case title
         case owner

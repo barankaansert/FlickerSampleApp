@@ -8,6 +8,7 @@ end
 
 def image_pod
     pod 'Kingfisher'
+    pod 'ImageViewer', :git => 'https://github.com/MailOnline/ImageViewer.git', :commit => 'ffe41dffb2ec0d6506d622b10099dc5e5eaeea43'
 end
 
 
@@ -19,5 +20,5 @@ end
 
 target 'FlickerSampleAppTests' do
 inherit! :search_paths
-# Pods for testing
+network_pod
 end

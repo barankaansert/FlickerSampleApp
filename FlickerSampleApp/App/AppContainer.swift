@@ -8,8 +8,16 @@
 
 import Foundation
 
+/**
+ Container of app, holds app's persistent contents.
+ */
 let App = AppContainer()
 
 final class AppContainer {
+    /**
+     Preventing initialize another instances
+     */
+    fileprivate init() { }
+    
     let router = AppRouter()
 }

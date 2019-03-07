@@ -1,9 +1,11 @@
 PODS:
   - Alamofire (4.8.1)
+  - ImageViewer (5.0.0)
   - Kingfisher (5.1.1)
 
 DEPENDENCIES:
   - Alamofire
+  - ImageViewer (from `https://github.com/MailOnline/ImageViewer.git`, commit `ffe41dffb2ec0d6506d622b10099dc5e5eaeea43`)
   - Kingfisher
 
 SPEC REPOS:
@@ -11,10 +13,21 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
 
+EXTERNAL SOURCES:
+  ImageViewer:
+    :commit: ffe41dffb2ec0d6506d622b10099dc5e5eaeea43
+    :git: https://github.com/MailOnline/ImageViewer.git
+
+CHECKOUT OPTIONS:
+  ImageViewer:
+    :commit: ffe41dffb2ec0d6506d622b10099dc5e5eaeea43
+    :git: https://github.com/MailOnline/ImageViewer.git
+
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  ImageViewer: 997018c2f4f7f9830602349bbcc3b2b776424942
   Kingfisher: 2558186963e5be42d98c5b110ccb3130148b77e4
 
-PODFILE CHECKSUM: 0d5b4e445e84a99d76b6afa89a2169bdb8c693c8
+PODFILE CHECKSUM: 3790deba48a9410d2edc151379f8c02e2a80720b
 
 COCOAPODS: 1.5.3
