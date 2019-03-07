@@ -25,7 +25,7 @@
 		679CADD1222FE3F2000E9B43 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD0222FE3F2000E9B43 /* NetworkManager.swift */; };
 		679CADD3222FE517000E9B43 /* NetworkingContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD2222FE517000E9B43 /* NetworkingContract.swift */; };
 		679CADD5222FE6E4000E9B43 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD4222FE6E4000E9B43 /* AppConstants.swift */; };
-		679CADD7222FE922000E9B43 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD6222FE922000E9B43 /* BaseRequest.swift */; };
+		679CADD7222FE922000E9B43 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD6222FE922000E9B43 /* BaseService.swift */; };
 		679CADD9222FEC8B000E9B43 /* RecentPhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679CADD8222FEC8B000E9B43 /* RecentPhotosService.swift */; };
 		67E20B5C223035B900983669 /* PhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B5B223035B900983669 /* PhotosResponse.swift */; };
 		67E20B5F2230367F00983669 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E20B5D2230367F00983669 /* PhotoCell.swift */; };
@@ -68,7 +68,7 @@
 		679CADD0222FE3F2000E9B43 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		679CADD2222FE517000E9B43 /* NetworkingContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingContract.swift; sourceTree = "<group>"; };
 		679CADD4222FE6E4000E9B43 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		679CADD6222FE922000E9B43 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		679CADD6222FE922000E9B43 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		679CADD8222FEC8B000E9B43 /* RecentPhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPhotosService.swift; sourceTree = "<group>"; };
 		67E20B5B223035B900983669 /* PhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosResponse.swift; sourceTree = "<group>"; };
 		67E20B5D2230367F00983669 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 			children = (
 				679CADD0222FE3F2000E9B43 /* NetworkManager.swift */,
 				679CADD2222FE517000E9B43 /* NetworkingContract.swift */,
-				679CADD6222FE922000E9B43 /* BaseRequest.swift */,
+				679CADD6222FE922000E9B43 /* BaseService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -487,7 +487,7 @@
 				679CADC4222FE01A000E9B43 /* RecentPhotosProtocols.swift in Sources */,
 				679CADD3222FE517000E9B43 /* NetworkingContract.swift in Sources */,
 				679CADC2222FE01A000E9B43 /* RecentPhotosRouter.swift in Sources */,
-				679CADD7222FE922000E9B43 /* BaseRequest.swift in Sources */,
+				679CADD7222FE922000E9B43 /* BaseService.swift in Sources */,
 				672D79CB222FDC3300906BD2 /* AppRouter.swift in Sources */,
 				672D79A4222FD9D500906BD2 /* AppDelegate.swift in Sources */,
 				67E20B652230436E00983669 /* URLComponentsExtension.swift in Sources */,
