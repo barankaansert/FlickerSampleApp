@@ -18,7 +18,7 @@ class RecentPhotosInteractor: RecentPhotosInteractorProtocol {
         self.service = service
     }
     
-    var delegate: RecentPhotosInteractorDelegate?
+    weak var delegate: RecentPhotosInteractorDelegate?
     
     /**
      Getting images from web services.

@@ -36,7 +36,7 @@ enum RecentPhotosInteractorOutput {
     case showPhotosList([Photo])
 }
 
-protocol RecentPhotosInteractorDelegate {
+protocol RecentPhotosInteractorDelegate: class {
     func handleOutput(_ output: RecentPhotosInteractorOutput)
 }
 
